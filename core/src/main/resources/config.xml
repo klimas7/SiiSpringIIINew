@@ -8,4 +8,12 @@
     <bean id="helloWorld" class="pl.sii.spring.core.HelloWorld">
     </bean>
 
+    <bean id="helloWorldSetter" class="pl.sii.spring.core.HelloWorld">
+        <property name="message" value="Hello Sii People!!" />
+     </bean>
+
+    <bean id="helloWorldConstructor" class="pl.sii.spring.core.HelloWorld">
+        <constructor-arg value="Hello Sii People! from Condtructor"/>
+    </bean>
+
 </beans>
