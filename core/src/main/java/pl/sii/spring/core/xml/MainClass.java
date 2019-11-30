@@ -1,4 +1,4 @@
-package pl.sii.spring.core;
+package pl.sii.spring.core.xml;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -23,6 +23,6 @@ public class MainClass {
 
         System.out.println("------");
         Factory factory = context.getBean("factory", Factory.class);
-        factory.doWork();
+       // factory.doWork();
     }
 }

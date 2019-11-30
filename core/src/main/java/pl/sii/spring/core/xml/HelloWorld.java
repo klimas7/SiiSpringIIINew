@@ -1,4 +1,4 @@
-package pl.sii.spring.core;
+package pl.sii.spring.core.xml;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

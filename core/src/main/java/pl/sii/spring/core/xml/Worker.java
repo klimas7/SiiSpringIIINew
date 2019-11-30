@@ -1,4 +1,4 @@
-package pl.sii.spring.core;
+package pl.sii.spring.core.xml;
 
 public interface Worker {
     void doWork();

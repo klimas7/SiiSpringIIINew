@@ -5,23 +5,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="helloWorld" class="pl.sii.spring.core.HelloWorld">
+    <bean id="helloWorld" class="pl.sii.spring.core.xml.HelloWorld">
     </bean>
 
-    <bean id="helloWorldSetter" class="pl.sii.spring.core.HelloWorld">
+    <bean id="helloWorldSetter" class="pl.sii.spring.core.xml.HelloWorld">
         <property name="message" value="Hello Sii People!!" />
      </bean>
 
-    <bean id="helloWorldConstructor" class="pl.sii.spring.core.HelloWorld">
+    <bean id="helloWorldConstructor" class="pl.sii.spring.core.xml.HelloWorld">
         <constructor-arg value="Hello Sii People! from Condtructor" index="1"/>
         <constructor-arg value="Hello Sii People! from Condtructor2" index="0"/>
     </bean>
 
-    <bean id="lazyWorker" class="pl.sii.spring.core.LazyWorker" scope="prototype" init-method="born"/>
-    <bean id="hardWorker" class="pl.sii.spring.core.HardWorker" scope="singleton" init-method="born"/>
-    <bean id="bestWorker" class="pl.sii.spring.core.HardWorker" init-method="born"/>
+    <bean id="lazyWorker" class="pl.sii.spring.core.xml.LazyWorker" scope="prototype" init-method="born" lazy-init="true"/>
+    <bean id="hardWorker" class="pl.sii.spring.core.xml.HardWorker" scope="singleton" init-method="born" lazy-init="true"/>
+    <bean id="bestWorker" class="pl.sii.spring.core.xml.HardWorker" init-method="born" lazy-init="true"/>
 
-    <bean id="factory" class="pl.sii.spring.core.Factory">
+    <bean id="factory" class="pl.sii.spring.core.xml.Factory" lazy-init="true">
         <property name="workers">
             <list>
                 <ref bean="hardWorker"/>
