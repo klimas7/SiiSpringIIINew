@@ -6,4 +6,9 @@ public class Triangle implements Shape {
     public int area() {
         return (int) ((a *a * Math.sqrt(3))/2);
     }
+
+    @Override
+    public String description() {
+        return Triangle.class.getName();
+    }
 }
