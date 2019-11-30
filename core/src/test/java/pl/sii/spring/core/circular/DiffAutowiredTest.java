@@ -12,12 +12,17 @@ import pl.sii.spring.core.diff.Shape;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = TestConfig.class)
 public class DiffAutowiredTest {
+    /*
+     * - Type
+     * - Qualifier
+     * - name
+     */
     @Autowired
     @Qualifier(value = "triangle")
-    private Shape shape;
+    private Shape square;
 
     @Test
     public void startContextTest() {
-        System.out.println(shape.description());
+        System.out.println(square.description());
     }
 }
