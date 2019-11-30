@@ -11,7 +11,7 @@
     <description>Sii Spring Krk</description>
 
     <modules>
-<!--        <module>core</module>-->
+        <module>core</module>
 <!--        <module>profiles</module>-->
 <!--        <module>properties</module>-->
 <!--        <module>aop</module>-->
