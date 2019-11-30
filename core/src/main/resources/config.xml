@@ -13,7 +13,26 @@
      </bean>
 
     <bean id="helloWorldConstructor" class="pl.sii.spring.core.HelloWorld">
-        <constructor-arg value="Hello Sii People! from Condtructor"/>
+        <constructor-arg value="Hello Sii People! from Condtructor" index="1"/>
+        <constructor-arg value="Hello Sii People! from Condtructor2" index="0"/>
+    </bean>
+
+    <bean id="lazyWorker" class="pl.sii.spring.core.LazyWorker" scope="prototype"/>
+    <bean id="hardWorker" class="pl.sii.spring.core.HardWorker" scope="singleton"/>
+    <bean id="bestWorker" class="pl.sii.spring.core.HardWorker"/>
+
+    <bean id="factory" class="pl.sii.spring.core.Factory">
+        <property name="workers">
+            <list>
+                <ref bean="hardWorker"/>
+                <ref bean="lazyWorker"/>
+                <ref bean="lazyWorker"/>
+                <ref bean="hardWorker"/>
+                <null/>
+            </list>
+        </property>
+        <property name="bestWorker" ref="bestWorker"/>
+        <property name="theMostLazyWorker" ref="lazyWorker"/>
     </bean>
 
 </beans>

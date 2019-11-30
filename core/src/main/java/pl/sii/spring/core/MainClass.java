@@ -20,5 +20,9 @@ public class MainClass {
 
         HelloWorld helloWorldConstructor = context.getBean("helloWorldConstructor", HelloWorld.class);
         helloWorldConstructor.print();
+
+        System.out.println("------");
+        Factory factory = context.getBean("factory", Factory.class);
+        factory.doWork();
     }
 }

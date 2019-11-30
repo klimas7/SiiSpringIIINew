@@ -11,8 +11,9 @@ import lombok.Setter;
 @Setter
 public class HelloWorld {
     private String message;
+    private String message2;
 
     public void print() {
-        System.out.println("Your message: " + message);
+        System.out.println("Your message: " + message + " : " + message2);
     }
 }
