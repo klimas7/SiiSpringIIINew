@@ -5,6 +5,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pl.sii.spring.core.diff.Circle;
+import pl.sii.spring.core.diff.Shape;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
@@ -13,10 +14,10 @@ import javax.inject.Inject;
 @ContextConfiguration(classes = TestConfig.class)
 public class DiffInjectionTest {
     @Inject
-    private Circle shape;
+    private Shape square;
 
     @Test
     public void startContextTest() {
-        System.out.println(shape.description());
+        System.out.println(square.description());
     }
 }

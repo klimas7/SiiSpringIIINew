@@ -6,15 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pl.sii.spring.core.diff.Circle;
+import pl.sii.spring.core.diff.Shape;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = TestConfig.class)
 public class DiffAutowiredTest {
     @Autowired
-    private Circle shape;
+    private Shape square;
 
     @Test
     public void startContextTest() {
-        System.out.println(shape.description());
+        System.out.println(square.description());
     }
 }

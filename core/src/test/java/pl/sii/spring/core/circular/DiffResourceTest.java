@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import pl.sii.spring.core.diff.Circle;
+import pl.sii.spring.core.diff.Shape;
 
 import javax.annotation.Resource;
 
@@ -13,10 +14,10 @@ import javax.annotation.Resource;
 @ContextConfiguration(classes = TestConfig.class)
 public class DiffResourceTest {
     @Resource
-    private Circle shape;
+    private Shape square;
 
     @Test
     public void startContextTest() {
-        System.out.println(shape.description());
+        System.out.println(square.description());
     }
 }
