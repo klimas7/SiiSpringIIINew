@@ -21,5 +21,9 @@ public class MainClass {
 
         HelloWorld helloWorldSetter = (HelloWorld) context.getBean("helloWorldSetter");
         helloWorldSetter.print();
+
+        System.out.println("------");
+        Factory factory = context.getBean("factory", Factory.class);
+        factory.doWork();
     }
 }
