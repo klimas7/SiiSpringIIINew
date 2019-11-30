@@ -17,9 +17,9 @@
         <constructor-arg value="Hello Sii People! from Condtructor2" index="0"/>
     </bean>
 
-    <bean id="lazyWorker" class="pl.sii.spring.core.LazyWorker" scope="prototype"/>
-    <bean id="hardWorker" class="pl.sii.spring.core.HardWorker" scope="singleton"/>
-    <bean id="bestWorker" class="pl.sii.spring.core.HardWorker"/>
+    <bean id="lazyWorker" class="pl.sii.spring.core.LazyWorker" scope="prototype" init-method="born"/>
+    <bean id="hardWorker" class="pl.sii.spring.core.HardWorker" scope="singleton" init-method="born"/>
+    <bean id="bestWorker" class="pl.sii.spring.core.HardWorker" init-method="born"/>
 
     <bean id="factory" class="pl.sii.spring.core.Factory">
         <property name="workers">
