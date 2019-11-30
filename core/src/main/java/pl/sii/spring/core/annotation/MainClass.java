@@ -11,5 +11,15 @@ public class MainClass {
 
         System.out.println(context.getBeanDefinitionCount());
         Arrays.asList(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+        System.out.println("-----------------------");
+        HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
+        helloWorld.print();
+
+        helloWorld.setMessage("Test");
+        helloWorld.print();
+
+        HelloWorld helloWorldSetter = (HelloWorld) context.getBean("helloWorldSetter");
+        helloWorldSetter.print();
     }
 }
